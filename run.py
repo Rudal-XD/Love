@@ -83,8 +83,6 @@ def banner():
  [\x1b[1;96m+%s] Facebook   : @KLZ
  [\x1b[1;96m+%s] Github      : https://github.com/kalze123/kalze-new
 ───────────────────────────────────────────────────────\n'''%(N,N,N,N))
-def kontol():
-balmond = O+"["+J+"•"+O+"]"
 def login():
 		try:
 			token = open('.token.txt','r').read()
