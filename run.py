@@ -67,10 +67,6 @@ bln = dic[(str(datetime.datetime.now().month))]
 thn = datetime.datetime.now().year
 okc = 'OK-'+str(tgl)+'-'+str(bln)+'-'+str(thn)+'.txt'
 cpc = 'CP-'+str(tgl)+'-'+str(bln)+'-'+str(thn)+'.txt'
-def clear():
-	os.system('clear')
-def back():
-	login()
 # BANNER
 def banner():
 	print('''%s
@@ -88,19 +84,7 @@ def banner():
  [\x1b[1;96m+%s] Github      : https://github.com/kalze123/kalze-new
 ───────────────────────────────────────────────────────\n'''%(N,N,N,N))
 def kontol():
-    os.system("clear")
-    print(f"""    __    _________________   _______ ______
-   / /   /  _/ ____/ ____/ | / / ___// ____/
-  / /    / // /   / __/ /  |/ /\__ \/ __/
- / /____/ // /___/ /___/ /|  /___/ / /___
-/_____/___/\____/_____/_/ |_//____/_____/
-{P}[•]{B}----------------------------------------------------{P}[•]
-{B} |
-{P}[•] AUTHOR: KALZE-XD
-{P}[•] WHATSAPP: 6283865283286
-{B}[•] FACEBOOK: KALZE-XD""")
 balmond = O+"["+J+"•"+O+"]"
-
 def login():
 		try:
 			token = open('.token.txt','r').read()
