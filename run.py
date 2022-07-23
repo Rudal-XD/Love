@@ -1080,7 +1080,6 @@ def uas(__Aang__Sayang__Laura__):
 		print ('\n%s[%s!%s] Yang bener kontol'%(P,K,P));time.sleep(2)
 		uas(__Aang__Sayang__Laura__)
 		
-        os.system('git pull')
 	try:os.mkdir('CP')
 	except:pass
 	try:os.mkdir('OK')
