@@ -86,8 +86,6 @@ def banner():
  [\x1b[1;96m+%s] Facebook   : gaming bubrah
  [\x1b[1;96m+%s] Github      : https://github.com/Rudal-XD
 ───────────────────────────────────────────────────────\n'''%(N,N,N,N))
-def kontol():
-   
 def login():
 		try:
 			token = open('.token.txt','r').read()
