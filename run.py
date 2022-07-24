@@ -76,7 +76,7 @@ class login:
 			try:
 				cc = requests.get('https://graph.facebook.com/me?access_token=%s'%(token)).json()['name']
 				open('token.x','w').write(token)
-				print('\n [+] Login berhasil )
+				print('\n [+] Login berhasil')
 				self.bot()
 			except KeyError:
 				jalan(' [!] Token error coba ganti akun tumbal!')
