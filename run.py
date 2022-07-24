@@ -72,7 +72,6 @@ def kontol():
 {B}[•] FACEBOOK: KALZE-XD""")
 def licensi():#line:42
   try :#line:43
-    os .system ('clear')
     kontol()
     print (f"""
 {U}[{P}1{U}]{P} Dapatkan Api key
