@@ -74,8 +74,6 @@ def licensi():#line:42
   try :#line:43
     os.system('clear')
     kontol()
-
-balmond = O+"["+J+"•"+O+"]"
 		
 def menu():
 	try:sh = requests.get('https://httpbin.org/ip').json()
