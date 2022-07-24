@@ -48,8 +48,6 @@ thn = datetime.datetime.now().year
 okc = 'OK-'+str(tgl)+'-'+str(bln)+'-'+str(thn)+'.txt'
 cpc = 'CP-'+str(tgl)+'-'+str(bln)+'-'+str(thn)+'.txt'
 # BANNER
-def clear():
-	os.system('clear')
 def back():
 	login()
 def banner():
