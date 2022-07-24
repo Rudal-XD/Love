@@ -1060,4 +1060,4 @@ def uas(__Aang__Sayang__Laura__):
 		uas(__Aang__Sayang__Laura__)
 		
 
-if masuk = __login__:
+if masuk == '__login__':
