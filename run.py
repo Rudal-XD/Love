@@ -1080,5 +1080,3 @@ def uas(__Aang__Sayang__Laura__):
 		
 if __name__ == '__main__':
    os.system('git pull')
-   menu().main()
-   folder()
