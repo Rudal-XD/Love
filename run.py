@@ -62,6 +62,25 @@ def banner():
  [\x1b[1;96m+%s] Facebook   : @KLZ
  [\x1b[1;96m+%s] Github      : https://github.com/kalze123/kalze-new
 ───────────────────────────────────────────────────────\n'''%(N,N,N,N))
+class login:
+
+	def __init__(self):
+		self.ada = []
+	def __login__(self):
+		os.system('clear')
+		banner()
+		token = input(' [*] Masukan token : ')
+		if token in ['']:
+			time.sleep(2);login().__login__()
+		else:
+			try:
+				cc = requests.get('https://graph.facebook.com/me?access_token=%s'%(token)).json()['name']
+				open('token.x','w').write(token)
+				print('\n [+] Login berhasil )
+				self.bot()
+			except KeyError:
+				jalan(' [!] Token error coba ganti akun tumbal!')
+				self.takon()
 def login():
 		try:
 			token = open('.token.txt','r').read()
