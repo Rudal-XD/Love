@@ -57,32 +57,27 @@ def banner():
 ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝╚══════╝╚══════╝ 
 """%(N))                                                    
 
-def login():
-	try:
-	sky = '# MASUKAN TOKEN FACEBOOK'
-	sky2 = mark(sky, style='green')
-	sol().print(sky2, style='cyan')
-	panda = input(x+'['+p+'•'+x+'] Token Fb : ')
-	akun=open('.token.txt','w').write(panda)
-	try:
-		tes = requests.get('https://graph.facebook.com/me?access_token='+panda)
-		tes3 = json.loads(tes.text)['id']
-		sue = '# nice Login berhasil'
-		suu = mark(sue, style='green')
-		sol().print(suu, style='cyan')
-		time.sleep(2.5)
-		menu()
-	except KeyError:
-		sue = '# Login Gagal, Cek token'
-		suu = mark(sue, style='red')
-		sol().print(suu, style='cyan')
-		time.sleep(2.5)
-		login()
-	except requests.exceptions.ConnectionError:
-		li = '# KONEKSI INTERNET BERMASALAH, PERIKSA & COBA LAGI'
-		lo = mark(li, style='red')
-		sol().print(lo, style='cyan')
-		exit()
+class login:
+		banner()
+		token = input(' [*] Masukan token : ')
+		if token in ['']:
+			time.sleep(2);login().__login__()
+		else:
+			try:
+				cc = requests.get('https://graph.facebook.com/me?access_token=%s'%(token)).json()['name']
+				open('token.x','w').write(token)
+				print('\n [+] Login berhasil )
+				self.menu()
+			except KeyError:
+				jalan(' [!] Token error coba ganti akun tumbal!')
+				self.takon()
+	def takon(self):
+		takon = input('\n [!] Mau tau cara ambil token y/t: ')
+		if takon in ['y','Y','iya']:
+			jalan('\n [!] Kamu akan di arahkan ke Ke Wa Untuk Donasi')
+			os.system('xdg-open wa.me/62895386194665')
+		else:
+			login().__login__()
 		
 def menu():
 	try:sh = requests.get('https://httpbin.org/ip').json()
