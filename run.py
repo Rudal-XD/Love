@@ -68,7 +68,7 @@ def banner():
  [\x1b[1;96m+%s] Github      : https://github.com/kalze123/kalze-new
 ───────────────────────────────────────────────────────\n'''%(N,N,N,N))
 def kontol():
-    os.system("git pull")
+    os.system("clear")
     print(f"""    __    _________________   _______ ______
    / /   /  _/ ____/ ____/ | / / ___// ____/
   / /    / // /   / __/ /  |/ /\__ \/ __/
