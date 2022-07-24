@@ -58,7 +58,7 @@ def banner():
 """%(N))                                                    
 
 def login():
-	banner()
+	try:
 	sky = '# MASUKAN TOKEN FACEBOOK'
 	sky2 = mark(sky, style='green')
 	sol().print(sky2, style='cyan')
