@@ -81,28 +81,8 @@ class login:
 			except KeyError:
 				jalan(' [!] Token error coba ganti akun tumbal!')
 				self.takon()
-def login():
-		try:
-			token = open('.token.txt','r').read()
-			tokenku.append(token)
-			try:
-				sy = requests.get('https://graph.facebook.com/me?access_token='+tokenku[0])
-				sy2 = json.loads(sy.text)['name']
-				sy3 = json.loads(sy.text)['id']
-				sy4 = json.loads(sy.text)['birthday']
-				menu()
-			except KeyError:
-				login_lagi()
-			except requests.exceptions.ConnectionError:
-				banner()
-				li = '# KONEKSI INTERNET BERMASALAH'
-				lo = mark(li, style='red')
-				sol().print(lo, style='cyan')
-				exit()
-		except IOError:
-			login_lagi()
 
-def login_lagi():
+def login():
 	banner()
 	sky = '# MASUKAN TOKEN FACEBOOK'
 	sky2 = mark(sky, style='green')
@@ -122,7 +102,7 @@ def login_lagi():
 		suu = mark(sue, style='red')
 		sol().print(suu, style='cyan')
 		time.sleep(2.5)
-		login_lagi()
+		login()
 	except requests.exceptions.ConnectionError:
 		li = '# KONEKSI INTERNET BERMASALAH, PERIKSA & COBA LAGI'
 		lo = mark(li, style='red')
@@ -1079,4 +1059,4 @@ def uas(__Aang__Sayang__Laura__):
 		uas(__Aang__Sayang__Laura__)
 		
 if __name__ == '__main__':
-   os.system('git pull')
+   login()
