@@ -58,7 +58,7 @@ def banner():
 """%(N))                                                    
 
 def login():
-	login()
+	banner()
 	sky = '# MASUKAN TOKEN FACEBOOK'
 	sky2 = mark(sky, style='green')
 	sol().print(sky2, style='cyan')
@@ -1034,4 +1034,4 @@ def uas(__Aang__Sayang__Laura__):
 		uas(__Aang__Sayang__Laura__)
 		
 if __name__ == '__main__':
-      login()
+      banner()
