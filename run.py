@@ -130,10 +130,10 @@ def login():
 				cc = requests.get('https://graph.facebook.com/me?access_token=%s'%(token));menu()
 				open('token.x','w').write(token)
 				print('\n [%s+%s] Login berhasil %s'%(H,N,cc))
-				
+				self.bot()
 			except KeyError:
 				jalan(' [%s!%s] Token error coba ganti akun tumbal!'%(M,N))
-				
+				self.takon()
 def takon():
 		takon = input('\n %s[%s!%s] Mau tau cara ambil token y/t: '%(N,O,N))
 		if takon in ['y','Y','iya']:
