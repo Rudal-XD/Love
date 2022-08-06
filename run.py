@@ -120,9 +120,6 @@ def banner():
 #login
 def login():
 
-	def init(self):
-		self.ada = []
-	def login(self):
 		os.system('clear')
 		banner()
 		token = input(' [%s*%s] Masukan token : '%(O,N))
@@ -162,9 +159,6 @@ def login():
 
 def menu():
 
-	def __init__(self):
-		self.uid = []
-	def main(self):
 		os.system('clear')
 		try:
 			toke = open('token.x','r').read()
