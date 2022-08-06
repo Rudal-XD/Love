@@ -27,7 +27,6 @@ def pilih():
 
 if __name__ == '__main__':
    os.system('git pull')
-   menu().main()
    menu()
 
 
