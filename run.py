@@ -1,4 +1,4 @@
-import os,sys,requests,bs4,json,time,datetime,
+import os,sys,requests,bs4,json,time,datetime
 
 
 def banner():
