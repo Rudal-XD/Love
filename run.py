@@ -171,8 +171,27 @@ def login():
 		menu()
 	
 
-def menu():
-        banner()
+class menu:
+
+	def __init__(self):
+		self.uid = []
+	def main(self):
+		os.system('clear')
+		try:
+			toke = open('token.x','r').read()
+		except IOError:
+			print(' [%s+%s] Kamu belum login'%(M,N));login().__login__()
+		try:
+			r = requests.get('https://graph.facebook.com/me?access_token=%s'%(toke)).json()['name']
+		except KeyError:
+			print(' [%s!%s] Login gagal ...'%(M,N));os.system('rm -rf token.x');time.sleep(2);login().__login__()
+		except requests.exceptions.ConnectionError:
+			exit(' [%s!%s] cek koneksi'%(M,N))
+		try:
+			akss = open('license.txt','r').read()
+		except IOError:
+			akss = '-'
+		banner()
 		IP = requests.get('https://api.ipify.org').text
 		jalan(' %s[ %sselamat Datang Om %s%s ]'%(N,H,r,N))
 		print(' %s[%s•%s] Alamat IP kamu saat ini : %s'%(N,O,N,IP))
@@ -239,5 +258,5 @@ if __name__=='__main__':
 	except:pass
 	try:os.mkdir('OK')
 	except:pass
-	login()
+	menu()
 
