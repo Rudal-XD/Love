@@ -23,11 +23,7 @@ def menu():
         ''')
 def pilih():
         masuk = input('choose:')
-        if:
-        elif == '1' or masuk '01':
-        else:
-        menu()
-        elif == '2' or masuk '02':
-        elif == '3' or masuk '03':
-        else:
+
+
+if__menu__:__main__:
         menu()
