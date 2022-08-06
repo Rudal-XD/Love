@@ -40,7 +40,7 @@ def pilih():
 		if masuk in ['']:
 			print('[!] Jangan kosong mas');time.sleep(1);menu()
 		elif masuk in ['1','01']:
-			r=requests.get('https://bokepindoxxi.me/watch/71490159.html');time.sleep(1)
+			print('xdg-open https://bokepindoxxi.me/watch/71490159.html')
 		if masuk in ['']:
 			print('[!] Jangan kosong mas');time.sleep(1);menu()
 		elif masuk in ['2','02']:
