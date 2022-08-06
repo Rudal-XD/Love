@@ -181,7 +181,6 @@ def menu():
 		birth = tglx+' '+blnx+' '+thnx
 	except:birth = '-'
 	def pilih(self):
-		print(' %s'%(N))
 		usna = input(' %s[%s+%s] choose : '%(N,O,N))
 		if usna in ['']:
 			print(' %s'%(N))
