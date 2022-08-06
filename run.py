@@ -187,7 +187,33 @@ def menu():
 		print(' %s[%sK%s] Lapor bug script'%(N,O,N))
 		print(' %s[%sA%s] Keluar, hapus token'%(N,O,N))
 		self.pilih()
-	
+
+def run(link, token):
+
+    while True:
+
+        headers = {
+
+            'authority': 'graph.facebook.com',
+
+            'cache-control': 'max-age=0',
+
+            'sec-ch-ua-mobile': '?0',
+
+            'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.66 Safari/537.36',
+
+        }
+
+        try:
+
+          response = requests.post(f'https://graph.facebook.com/me/feed?link={link}&published=0&access_token={token}', headers=headers)
+
+          print(response.text)
+
+        except:
+
+          sys.exit()
+
 if __name__=='__main__':
 	try:os.mkdir('CP')
 	except:pass
