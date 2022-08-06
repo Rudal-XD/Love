@@ -183,8 +183,7 @@ def menu():
 	def pilih(self):
 		usna = input(' %s[%s+%s] choose : '%(N,O,N))
 		if usna in ['']:
-			print(' %s'%(N))
-			print(' %s[%s!%s] Jangan kosong mas'%(N,M,N));time.sleep(2);menu().main()
+			print(' %s[%s!%s] Jangan kosong mas'%(N,M,N));time.sleep(2);exit()
 		elif usna in ['0','00']:
 			try:
 				token = open('token.x','r').read()
@@ -201,7 +200,7 @@ def menu():
 			except KeyError:
 				print(' %s[%s!%s] Akun anda tidak publik...'%(N,M,N));time.sleep(2);menu().main()
 			else:
-				crack().fbeh(id)
+				exit()
 		elif usna in ['1','01']:
 			try:
 				token = open('token.x','r').read()
