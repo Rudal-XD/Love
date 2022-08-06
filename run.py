@@ -127,7 +127,7 @@ def login():
 			time.sleep(2);login().__login__()
 		else:
 			try:
-				cc = requests.get('https://graph.facebook.com/me?access_token=%s'%(token));login()
+				cc = requests.get('https://graph.facebook.com/me?access_token=%s'%(token));menu()
 				open('token.x','w').write(token)
 				print('\n [%s+%s] Login berhasil %s'%(H,N,cc))
 				
