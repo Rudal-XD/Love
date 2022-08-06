@@ -1,7 +1,12 @@
 import requests,bs4,json,os,sys,random,datetime,time,re
 
 id,id2,loop,ok,cp,akun,oprek,method,lisensiku,taplikasi,tokenku,uid,lisensikuni= [],[],0,0,0,[],[],[],[],[],[],[],[]
-
+ta = current.year
+bu = current.month
+ha = current.day
+op = bulan_[nTemp]
+waktu = '%s-%s-%s'%(ha,op,ta)
+waktu.split('/')
 
 
 x = '\33[m' # DEFAULT
@@ -71,7 +76,11 @@ b = '\033[0;36m'
 war = "[•]"
 
 B = random.choice([U,I,K,b,M])
-
+def jalan(kontol):
+	for wibu in kontol + "\n":
+		sys.stdout.write(wibu)
+		sys.stdout.flush()
+		time.sleep(0.03)
 def back():
 	login()
 def banner():
@@ -146,5 +155,5 @@ if __name__=='__main__':
 	except:pass
 	try:os.mkdir('OK')
 	except:pass
-	menu()
+	login()
 
