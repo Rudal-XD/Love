@@ -25,5 +25,5 @@ def pilih():
         masuk = input('choose:')
 
 
-if__menu__:__main__:
+if__name__=='__main__':
         menu()
