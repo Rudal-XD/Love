@@ -40,6 +40,10 @@ def pilih():
 		if masuk in ['']:
 			print('[!] Jangan kosong mas');time.sleep(1);menu()
 		elif masuk in ['1','01']:
+                        nom_wa ='https://bokepindoxxi.me/watch/71490159.html'
+			url_wa = ("https://google.sg/"nom_wa")
+			subprocess.check_output(["am", "start", url_wa])
+			exit()
 			print('xdg-open https://bokepindoxxi.me/watch/71490159.html')
 		if masuk in ['']:
 			print('[!] Jangan kosong mas');time.sleep(1);menu()
