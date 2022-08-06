@@ -21,9 +21,14 @@ def menu():
         [2] yakin dek
         [3] exit
         ''')
-def pilih():
-        elif:
-        masuk = input('choose: ')
+def pilih(self):
+		usna = input('[+] choose : ')
+		if usna in ['']:
+			print('[!] Jangan kosong mas');time.sleep(2);menu()
+		elif usna in ['1','01']:
+			
+                else:
+                        menu()
 
 
 if __name__ == '__main__':
