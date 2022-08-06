@@ -1,8 +1,16 @@
 import os,sys,requests,bs4,json,time,datetime,subprocess
-
+P = '\x1b[1;97m' # PUTIH
+M = '\x1b[1;91m' # MERAH
+H = '\x1b[1;92m' # HIJAU
+K = '\x1b[1;93m' # KUNING
+B = '\x1b[1;94m' # BIRU
+U = '\x1b[1;95m' # UNGU
+O = '\x1b[1;96m' # BIRU MUDA
+N = '\x1b[0m'    # WARNA YANG UDAH GAK PERAWAN :V
+J = '\033[38;2;255;127;0;1m' # ORANGE
 def banner():
 	print('''
-_______           ______   _______  _                               ______  
+{H}_______           ______   _______  _                               ______  
 (  ____ )|\     /|(  __  \ (  ___  )( \                   |\     /|(  __  \ 
 | (    )|| )   ( || (  \  )| (   ) || (                   ( \   / )| (  \  )
 | (____)|| |   | || |   ) || (___) || |        _____       \ (_) / | |   ) |
@@ -12,9 +20,9 @@ _______           ______   _______  _                               ______
 |/   \__/(_______)(______/ |/     \|(_______/             |/     \|(______/ 
                                                                
 ────────────────────────────────────────────────────────────────
-[\x1b[+] Author   : Rudal-XD
-[\x1b[+] Github   : -
-[\x1b[+] Facebook : gaming bubrah
+[\x1b[1;96m+] Author   : Rudal-XD
+[\x1b[1;96m+] Github   : -
+[\x1b[1;96m+] Facebook : gaming bubrah
 ────────────────────────────────────────────────────────────────\n''')
 
 def menu():
