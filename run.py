@@ -118,11 +118,11 @@ def banner():
 ───────────────────────────────────────────────────────\n'''%(N,N,N,N))
 
 #login
-class login:
+def login():
 
-	def __init__(self):
+	def init(self):
 		self.ada = []
-	def __login__(self):
+	def login(self):
 		os.system('clear')
 		banner()
 		token = input(' [%s*%s] Masukan token : '%(O,N))
@@ -160,7 +160,7 @@ class login:
 		os.system('xdg-open wa.me/6285772148224')
 		menu().main()
 
-class menu:
+def menu():
 
 	def __init__(self):
 		self.uid = []
