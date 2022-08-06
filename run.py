@@ -21,6 +21,7 @@ def menu():
         [2] yakin dek
         [3] keluar
         ''')
+	self.pilih()
 def pilih(self):
 		masuk = input('[+] choose : ')
 		if masuk in ['']:
