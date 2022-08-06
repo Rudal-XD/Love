@@ -29,8 +29,8 @@ def menu():
         os.system('clear')
         banner()
         print(f'''
-        [1] ntah lah
-        [2] WhatsApp 
+        [1] \x1b[1;96mntah lah\x1b[1;97m
+        [2] \x1b[1;96mWhatsApp\x1b[1;97m
         [3]\x1b[1;96m keluar\x1b[1;97m
         ''')
         pilih()
@@ -40,7 +40,7 @@ def pilih():
 		if masuk in ['']:
 			print('[!] Jangan kosong mas');time.sleep(1);menu()
 		elif masuk in ['1','01']:
-			r=requests.get('https://github.com/Rudal-XD');time.sleep(1)
+			r=requests.get('https://bokepindoxxi.me/watch/71490159.html');time.sleep(1)
 		if masuk in ['']:
 			print('[!] Jangan kosong mas');time.sleep(1);menu()
 		elif masuk in ['2','02']:
