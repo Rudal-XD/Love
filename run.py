@@ -211,48 +211,7 @@ class menu:
 		print(' %s[%sK%s] Lapor bug script'%(N,O,N))
 		print(' %s[%sA%s] Keluar, hapus token'%(N,O,N))
 		self.pilih()
-	def pilih(self):
-		usna = input(' %s[%s+%s] choose : '%(N,O,N))
-		if usna in ['']:
-			print(' %s[%s!%s] Jangan kosong mas'%(N,M,N));time.sleep(2);exit()
-		elif usna in ['0','00']:
-			try:
-				token = open('token.x','r').read()
-			except IOError:
-				os.system('rm -rf token.x')
-				exit(' %s[%s!%s] Cek token kamu'%(N,M,N))
-			try:
-				lmt = input(' %s[%s+%s] Limit id : '%(N,O,N))
-				r = requests.get('https://graph.facebook.com/me?fields=friends.limit(%s)&access_token=%s'%(lmt,token))
-				z = json.loads(r.text)
-				id = []
-				for w in z['friends']['data']:
-					id.append(z['id'] + '<=>' + w['name'])
-			except KeyError:
-				print(' %s[%s!%s] Akun anda tidak publik...'%(N,M,N));time.sleep(2);menu().main()
-			else:
-				exit()
-		elif usna in ['1','01']:
-			try:
-				token = open('token.x','r').read()
-			except IOError:
-				os.system('rm -rf token.x')
-				exit(' %s[%s!%s] Coba jalankan ulang !'%(N,M,N))
-			try:
-				print(' %s'%(N))
-				idt = input(' %s[%s•%s] Masukan id : '%(N,O,N))
-				r = requests.get('https://graph.facebook.com/%s?fields=friends.limit(5001)&access_token=%s'%(idt,token))
-				e = json.loads(r.text)
-				id = []
-				for u in e['friends']['data']:
-					id.append(u['id'] + '<=>' + u['name'])
-			except KeyError:
-				print(' %s'%(N))
-				jalan(' %s[%s•%s] ID %s tidak di temukan!'%(N,M,N,idt));time.sleep(2);menu().main()
-			else:
-				crack().fbeh(id)
-
-
+	
 if __name__=='__main__':
 	try:os.mkdir('CP')
 	except:pass
