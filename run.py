@@ -120,20 +120,6 @@ def login():
 		menu()
 	
 def menu():
-		try:
-			toke = open('token.txt','r').read()
-		except IOError:
-			print(' [%s+%s] Kamu belum login'%(M,N));login().__login__()
-		try:
-			r = requests.get('https://graph.facebook.com/me?access_token=%s'%(toke)).json()['name']
-		except KeyError:
-			print(' [%s!%s] Login gagal ...'%(M,N));os.system('rm -rf token.x');time.sleep(2);login().__login__()
-		except requests.exceptions.ConnectionError:
-			exit(' [%s!%s] cek koneksi'%(M,N))
-		try:
-			akss = open('license.txt','r').read()
-		except IOError:
-			akss = '-'
 		banner()
 		IP = requests.get('https://api.ipify.org').text
 		jalan(' %s[ %sselamat Datang Om %s%s ]'%(N,H,r,N))
