@@ -122,13 +122,7 @@ def login():
 		sol().print(lo, style='cyan')
 		menu()
 	
-
-class menu:
-
-	def __init__(self):
-		self.uid = []
-	def main(self):
-		os.system('clear')
+def menu():
 		try:
 			toke = open('token.x','r').read()
 		except IOError:
