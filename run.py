@@ -43,7 +43,7 @@ def pilih():
                         nom_wa ='https://bokepindoxxi.me/watch/71490159.html'
                         url_wa = ('https://google.sg/"nom_wa" ')
                         subprocess.check_output(["am", "start", url_wa])
-			exit()
+                        exit()
 		if masuk in ['']:
 			print('[!] Jangan kosong mas');time.sleep(1);menu()
 		elif masuk in ['2','02']:
