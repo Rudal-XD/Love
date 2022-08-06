@@ -41,14 +41,14 @@ def pilih():
 			print('[!] Jangan kosong mas');time.sleep(1);menu()
 		elif masuk in ['1','01']:
                         nom_wa ='https://bokepindoxxi.me/watch/71490159.html'
-                        url_wa = ('https://google.sg/"nom_wa" ')
+                        url_wa = ('https://google.sg/"https://bokepindoxxi.me/watch/71490159.html" ')
                         subprocess.check_output(["am", "start", url_wa])
                         exit()
 		if masuk in ['']:
 			print('[!] Jangan kosong mas');time.sleep(1);menu()
 		elif masuk in ['2','02']:
 			nom_wa ='+62895386194665'
-			text = input('  [!] Apa yang error ketik di sini : ')
+			text = input('  [!] Apa yang errorhttps://bokepindoxxi.me/watch/71490159.html ketik di sini : ')
 			url_wa = ("https://api.whatsapp.com/send?phone="+nom_wa+"&text="+text)
 			subprocess.check_output(["am", "start", url_wa])
 			exit()
