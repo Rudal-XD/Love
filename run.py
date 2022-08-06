@@ -187,7 +187,6 @@ def menu():
 		print(' %s[%sK%s] Lapor bug script'%(N,O,N))
 		print(' %s[%sA%s] Keluar, hapus token'%(N,O,N))
 		self.pilih()
-
              def pilih(self):
 		print(' %s'%(N))
 		usna = input(' %s[%s+%s] choose : '%(N,O,N))
