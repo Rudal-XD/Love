@@ -21,9 +21,9 @@ def menu():
         [2] yakin dek
         [3] keluar
         ''')
-        self.pilih()
+        pilih()
 
-def pilih(self):
+def pilih():
 		masuk = input('[+] choose : ')
 		if masuk in ['']:
 			print('[!] Jangan kosong mas');time.sleep(2);menu()
