@@ -169,10 +169,10 @@ def login():
 		lo = mark(li, style='red')
 		sol().print(lo, style='cyan')
 		menu()
-		
-		class menu:
+	
+class menu:
 
-	def __init__(self): #line1
+	def__init__(self): 
 		self.uid = []
 	def menu(self):
 		try:
