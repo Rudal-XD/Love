@@ -188,7 +188,7 @@ def menu():
 		print(' %s[%sA%s] Keluar, hapus token'%(N,O,N))
 		self.pilih()
 
-	def pilih(self):
+	     def pilih():
 		print(' %s'%(N))
 		usna = input(' %s[%s+%s] choose : '%(N,O,N))
 		if usna in ['']:
