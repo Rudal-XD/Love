@@ -26,9 +26,9 @@ def menu():
 def pilih():
 		masuk = input('[+] choose : ')
 		if masuk in ['']:
-			print('[!] Jangan kosong mas');time.sleep(2);menu()
+			print('[!] Jangan kosong mas');time.sleep(1);menu()
 		elif masuk in ['1','01']:
-			req=requests.get('https://github.com/Rudal-XD')
+			requests.get('https://github.com/Rudal-XD')
 		else:
 			menu()
 
