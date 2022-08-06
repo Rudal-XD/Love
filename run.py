@@ -186,7 +186,6 @@ def menu():
 		print(' %s[%sG%s] Get data² facebook'%(N,O,N))
 		print(' %s[%sK%s] Lapor bug script'%(N,O,N))
 		print(' %s[%sA%s] Keluar, hapus token'%(N,O,N))
-		self.pilih()
 
 	     def pilih():
 		print(' %s'%(N))
