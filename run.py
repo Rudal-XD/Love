@@ -1,4 +1,9 @@
 import requests,bs4,json,os,sys,random,datetime,time,re
+from concurrent.futures import ThreadPoolExecutor as khamdihiXD
+from datetime import datetime
+from bs4 import BeautifulSoup as parser
+ct = datetime.now()
+n = ct.month
 
 id,id2,loop,ok,cp,akun,oprek,method,lisensiku,taplikasi,tokenku,uid,lisensikuni= [],[],0,0,0,[],[],[],[],[],[],[],[]
 ta = current.year
