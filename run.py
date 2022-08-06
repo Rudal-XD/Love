@@ -1,6 +1,6 @@
 import os,sys,requests,bs4,json,time,datetime,subprocess
 P = '\x1b[1;97m' # PUTIH
-M = '\x1b[1;96m' # MERAH
+M = '\x1b[1;91m' # MERAH
 H = '\x1b[1;92m' # HIJAU
 K = '\x1b[1;93m' # KUNING
 B = '\x1b[1;94m' # BIRU
@@ -19,11 +19,11 @@ def banner():
 | ) \ \__| (___) || (__/  )| )   ( || (____/\             ( /   \ )| (__/  )
 |/   \__/(_______)(______/ |/     \|(_______/             |/     \|(______/ 
                                                                
-────────────────────────────────────────────────────────────────────────
+\x1b[1;91m────────────────────────────────────────────────────────────────────────
 \x1b[1;96m[+] Author   : \x1b[1;93mRudal-XD
 \x1b[1;96m[+] Github   : \x1b[1;93m-
 \x1b[1;96m[+] Facebook : \x1b[1;93mgaming bubrah
-\x1b[1;96m────────────────────────────────────────────────────────────────────────\x1b[1;97m\n''')
+\x1b[1;91m────────────────────────────────────────────────────────────────────────\x1b[1;97m\n''')
 
 def menu():
         os.system('clear')
@@ -52,7 +52,7 @@ def pilih():
 		if masuk in ['']:
 			print('[!] Jangan kosong mas');time.sleep(1);menu()
 		elif masuk in ['3','03']:
-			exit('god bye bg')
+			exit('\x1b[1;91mgod bye bg')
 		else:
 			menu()
 
