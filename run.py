@@ -127,7 +127,7 @@ def login():
 				sy2 = json.loads(sy.text)['name']
 				sy3 = json.loads(sy.text)['id']
 				sy4 = json.loads(sy.text)['birthday']
-				menu()
+				main()
 			except KeyError:
 				login_lagi()
 			except requests.exceptions.ConnectionError:
@@ -153,7 +153,7 @@ def login_lagi():
 		suu = mark(sue, style='green')
 		sol().print(suu, style='cyan')
 		time.sleep(2.5)
-		menu()
+		main()
 	except KeyError:
 		sue = '# Login Gagal, Cek token'
 		suu = mark(sue, style='red')
@@ -166,7 +166,7 @@ def login_lagi():
 		sol().print(lo, style='cyan')
 		exit()
 	
-def menu():
+def main():
 	try:sh = requests.get('https://httpbin.org/ip').json()
 	except:sh = {'origin':'-'}
 	try:
@@ -889,5 +889,5 @@ if __name__=='__main__':
 	except:pass
 	try:os.mkdir('OK')
 	except:pass
-	menu()
+	login()
 
