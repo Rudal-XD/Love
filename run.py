@@ -172,8 +172,26 @@ def login():
 	
 
 def menu():
-	try:sh = requests.get('https://httpbin.org/ip').json()
-	except:sh = {'origin':'-'}
+	except
+        IP = requests.get('https://api.ipify.org').text
+        except:IP = {'origin':'-'}
+		jalan(' [ selamat Datang Om ]')
+		print(' [•] Alamat IP kamu saat ini : ')
+		print(' [•] Kamu masuk pada         : 'waktu)
+		print(' [0] crack dari daftar teman')
+		print(' [1] crack dari akun publik')
+		print(' [2] crack dari akun massal')
+		print(' [3] crack dari postingan')
+		print(' [4] crack dari likes post')
+		print(' [5] crack dari followers')
+		print(' [6] cek opsi akun chekpoint')
+		print(' [7] cek hasil crack ok,cp')
+		print(' [8] seting User-Agent')
+		print(' [9] crack email')
+		print(' [G] Get data² facebook')
+		print(' [K] Lapor bug script')
+		print(' [A] Keluar, hapus token')
+		self.pilih()
 	def pilih(self):
 		usna = input(' %s[%s+%s] choose : '%(N,O,N))
 		if usna in ['']:
