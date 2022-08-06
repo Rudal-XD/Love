@@ -31,7 +31,7 @@ def menu():
         print(f'''
         [1] ntah lah
         [2] WhatsApp 
-        [3] \x1b[1;96keluar\x1b[1;97m
+        [3]\x1b[1;96m keluar\x1b[1;97m
         ''')
         pilih()
 
