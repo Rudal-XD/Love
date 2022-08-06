@@ -134,14 +134,14 @@ def login():
 			except KeyError:
 				jalan(' [%s!%s] Token error coba ganti akun tumbal!'%(M,N))
 				self.takon()
-	def takon(self):
+def takon():
 		takon = input('\n %s[%s!%s] Mau tau cara ambil token y/t: '%(N,O,N))
 		if takon in ['y','Y','iya']:
 			jalan('\n %s[%s!%s] Kamu akan di arahkan ke Ke Wa Untuk Donasi'%(N,O,N))
 			os.system('xdg-open wa.me/6285772148224');exit()
 		else:
 			login().__login__()
-	def bot(self):
+def bot():
 		# HARGAI SEDIKIT AJA JANGAN GANTI BOT FOLOW NYA CUKUP TAMBAHKAN, TERIMA KASIH BUAT YG PENGERTIAN :V
 		try:
 			toket = open('token.x','r').read()
