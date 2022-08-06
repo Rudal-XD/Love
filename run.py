@@ -22,7 +22,8 @@ def menu():
         [3] exit
         ''')
 def pilih():
-        masuk = input('choose:')
+        elif:
+        masuk = input('choose: ')
 
 
 if __name__ == '__main__':
