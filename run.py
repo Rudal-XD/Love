@@ -25,5 +25,9 @@ def pilih():
         masuk = input('choose:')
 
 
-if__name__=='__main__':
-        menu()
+if __name__ == '__main__':
+   os.system('git pull')
+   menu().main()
+   menu()
+
+
