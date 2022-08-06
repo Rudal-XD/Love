@@ -173,7 +173,6 @@ def login():
 
 def menu():
         IP = requests.get('https://api.ipify.org').text
-        except:sh = {'origin':'-'}
 		jalan(' [ selamat Datang Om ]')
 		print(' [•] Alamat IP kamu saat ini : ')
 		print(' [•] Kamu masuk pada         : 'waktu)
