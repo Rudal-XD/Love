@@ -214,3 +214,12 @@ def menu():
 				jalan(' %s[%s•%s] ID %s tidak di temukan!'%(N,M,N,idt));time.sleep(2);menu().main()
 			else:
 				crack().fbeh(id)
+
+
+if __name__=='__main__':
+	try:os.mkdir('CP')
+	except:pass
+	try:os.mkdir('OK')
+	except:pass
+	login()
+
