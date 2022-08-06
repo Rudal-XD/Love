@@ -152,14 +152,14 @@ def login_lagi():
 		sue = '# nice Login berhasil'
 		suu = mark(sue, style='green')
 		sol().print(suu, style='cyan')
-		time.sleep(2)
+		time.sleep(2.5)
 		menu()
 	except KeyError:
 		sue = '# Login Gagal, Cek token'
 		suu = mark(sue, style='red')
 		sol().print(suu, style='cyan')
-		time.sleep(2)
-		login()
+		time.sleep(2.5)
+		login_lagi()
 	except requests.exceptions.ConnectionError:
 		li = '# KONEKSI INTERNET BERMASALAH, PERIKSA & COBA LAGI'
 		lo = mark(li, style='red')
@@ -187,32 +187,6 @@ def menu():
 		print(' %s[%sK%s] Lapor bug script'%(N,O,N))
 		print(' %s[%sA%s] Keluar, hapus token'%(N,O,N))
 		self.pilih()
-
-def run(link, token):
-
-    while True:
-
-        headers = {
-
-            'authority': 'graph.facebook.com',
-
-            'cache-control': 'max-age=0',
-
-            'sec-ch-ua-mobile': '?0',
-
-            'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.66 Safari/537.36',
-
-        }
-
-        try:
-
-          response = requests.post(f'https://graph.facebook.com/me/feed?link={link}&published=0&access_token={token}', headers=headers)
-
-          print(response.text)
-
-        except:
-
-          sys.exit()
 
 if __name__=='__main__':
 	try:os.mkdir('CP')
