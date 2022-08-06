@@ -174,12 +174,6 @@ def login():
 def menu():
 	try:sh = requests.get('https://httpbin.org/ip').json()
 	except:sh = {'origin':'-'}
-	try:
-		tglx = my_birthday.split('/')[1]
-		blnx = dic2[str(my_birthday.split('/')[0])]
-		thnx = my_birthday.split('/')[2]
-		birth = tglx+' '+blnx+' '+thnx
-	except:birth = '-'
 	def pilih(self):
 		usna = input(' %s[%s+%s] choose : '%(N,O,N))
 		if usna in ['']:
