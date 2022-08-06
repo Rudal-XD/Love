@@ -19,14 +19,14 @@ def menu():
         print(f'''
         [1] loss dooll
         [2] yakin dek
-        [3] exit
+        [3] keluar
         ''')
 def pilih(self):
-		usna = input('[+] choose : ')
-		if usna in ['']:
+		masuk = input('[+] choose : ')
+		if masuk in ['']:
 			print('[!] Jangan kosong mas');time.sleep(2);menu()
-		elif usna in ['1','01']:
-			requests.get('https://github.com/Rudal-XD')
+		elif masuk in ['1','01']:
+			req=requests.get('https://github.com/Rudal-XD')
 		else:
 			menu()
 
