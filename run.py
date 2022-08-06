@@ -167,28 +167,15 @@ def login_lagi():
 		exit()
 	
 def menu():
-		banner()
-		IP = requests.get('https://api.ipify.org').text
-		jalan(' %s[ %sselamat Datang Om %s%s ]'%(N,H,r,N))
-		print(' %s[%s•%s] Alamat IP kamu saat ini : %s'%(N,O,N,IP))
-		print(' %s[%s•%s] Kamu masuk pada         : %s'%(N,O,N,waktu))
-		print(' %s'%(N))
-		print(' %s[%s0%s] crack dari daftar teman'%(N,O,N))
-		print(' %s[%s1%s] crack dari akun publik'%(N,O,N))
-		print(' %s[%s2%s] crack dari akun massal'%(N,O,N))
-		print(' %s[%s3%s] crack dari postingan'%(N,O,N))
-		print(' %s[%s4%s] crack dari likes post'%(N,O,N))
-		print(' %s[%s5%s] crack dari followers'%(N,O,N))
-		print(' %s[%s6%s] cek opsi akun chekpoint'%(N,O,N))
-		print(' %s[%s7%s] cek hasil crack ok,cp'%(N,O,N))
-		print(' %s[%s8%s] seting User-Agent'%(N,O,N))
-		print(' %s[%s9%s] crack email'%(N,O,N))
-		print(' %s[%sG%s] Get data² facebook'%(N,O,N))
-		print(' %s[%sK%s] Lapor bug script'%(N,O,N))
-		print(' %s[%sA%s] Keluar, hapus token'%(N,O,N))
-		self.pilih()
-
-	     def pilih(self):
+	try:sh = requests.get('https://httpbin.org/ip').json()
+	except:sh = {'origin':'-'}
+	try:
+		tglx = my_birthday.split('/')[1]
+		blnx = dic2[str(my_birthday.split('/')[0])]
+		thnx = my_birthday.split('/')[2]
+		birth = tglx+' '+blnx+' '+thnx
+	except:birth = '-'
+	def pilih(self):
 		print(' %s'%(N))
 		usna = input(' %s[%s+%s] choose : '%(N,O,N))
 		if usna in ['']:
