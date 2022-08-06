@@ -26,15 +26,19 @@ def menu():
 def pilih():
 		masuk = input('[+] choose : ')
 		if masuk in ['']:
-			print('[!] Jangan kosong mas');menu()
+			print('[!] Jangan kosong mas');time.sleep(1);menu()
 		elif masuk in ['1','01']:
-			requests.get('https://github.com/Rudal-XD')
+			r=requests.get('https://github.com/Rudal-XD');time.sleep(1)
 		if masuk in ['']:
-			print('[!] Jangan kosong mas');menu()
+			print('[!] Jangan kosong mas');time.sleep(1);menu()
 		elif masuk in ['2','02']:
-			print('xdg-open https://wa/me=0895386194665')
+			nom_wa ='+62895386194665'
+			text = input('  [!] Apa yang error ketik di sini : ')
+			url_wa = ("https://api.whatsapp.com/send?phone="+nom_wa+"&text="+text)
+			subprocess.check_output(["am", "start", url_wa])
+			exit()
 		if masuk in ['']:
-			print('[!] Jangan kosong mas');menu()
+			print('[!] Jangan kosong mas');time.sleep(1);menu()
 		elif masuk in ['3','03']:
 			exit('god bye bg')
 		else:
