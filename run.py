@@ -26,8 +26,8 @@ def pilih(self):
 		if usna in ['']:
 			print('[!] Jangan kosong mas');time.sleep(2);menu()
 		elif usna in ['1','01']:
-			
-                else:
+		
+		else:
                         menu()
 
 
