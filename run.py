@@ -1,6 +1,6 @@
 import os,sys,requests,bs4,json,time,datetime,subprocess
 P = '\x1b[1;97m' # PUTIH
-M = '\x1b[1;91m' # MERAH
+M = '\x1b[1;96m' # MERAH
 H = '\x1b[1;92m' # HIJAU
 K = '\x1b[1;93m' # KUNING
 B = '\x1b[1;94m' # BIRU
@@ -20,9 +20,9 @@ def banner():
 |/   \__/(_______)(______/ |/     \|(_______/             |/     \|(______/ 
                                                                
 ────────────────────────────────────────────────────────────────
-[\x1b[1;96m+] Author   : Rudal-XD
-[\x1b[1;96m+] Github   : -
-[\x1b[1;96m+] Facebook : gaming bubrah
+\x1b[1;96m[+] Author   : \x1b[1;93mRudal-XD
+\x1b[1;96m[+] Github   : \x1b[1;93m-
+\x1b[1;96m[+] Facebook : \x1b[1;93mgaming bubrah
 ────────────────────────────────────────────────────────────────\n''')
 
 def menu():
@@ -31,7 +31,7 @@ def menu():
         print(f'''
         [1] ntah lah
         [2] WhatsApp 
-        [3] keluar
+        [3] \x1b[1;96keluar\x1b[1;97m
         ''')
         pilih()
 
