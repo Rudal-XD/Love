@@ -1,8 +1,5 @@
 import os,sys,requests,bs4,json,time,datetime,subprocess
 
-
-B=1;96m#biru
-
 def banner():
 	print('''
 1;96m_______           ______   _______  _                               ______  
