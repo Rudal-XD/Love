@@ -92,16 +92,13 @@ def banner():
 ───────────────────────────────────────────────────────\n'''%(N,N,N,N))
 
 #login
-
-balmond = O+"["+J+"•"+O+"]"
-
 def login():
 	banner()
 	sky = '# MASUKAN TOKEN FACEBOOK'
 	sky2 = mark(sky, style='green')
 	sol().print(sky2, style='cyan')
 	panda = input(x+'['+p+'•'+x+'] Token Fb : ')
-	akun=open('.token.x','w').write(panda)
+	akun=open('.token.txt','w').write(panda)
 	try:
 		tes = requests.get('https://graph.facebook.com/me?access_token='+panda)
 		tes3 = json.loads(tes.text)['id']
@@ -124,7 +121,7 @@ def login():
 	
 def menu():
 		try:
-			toke = open('token.x','r').read()
+			toke = open('token.txt','r').read()
 		except IOError:
 			print(' [%s+%s] Kamu belum login'%(M,N));login().__login__()
 		try:
